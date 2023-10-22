@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import PostList from "../components/PostList.astro";
+const posts = await getCollection("posts");
+---
+
+<Layout title="Esto es una prueba de un blog">
+  <section class="p-14">
+    <PostList posts={posts} />
+  </section>
+</Layout>

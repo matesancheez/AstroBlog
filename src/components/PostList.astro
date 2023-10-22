@@ -1,0 +1,9 @@
+---
+import Post from "./Post.astro";
+
+const { posts } = Astro.props;
+---
+
+<div class="grid grid-cols-4 gap-14 max-sm:grid-cols-1 max-lg:grid-cols-2">
+  {posts.map((post) => <Post post={post} />)}
+</div>
